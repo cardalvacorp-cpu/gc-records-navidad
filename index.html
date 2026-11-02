@@ -5,16 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guillermo Cardenas - GC Records</title>
   <style>
-    body { font-family: system-ui, sans-serif; background: #0a0a0a; color: #fff; text-align: center; padding: 50px 20px; }
-    h1 { color: #d4af37; }
-    a { color: #d4af37; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: system-ui, -apple-system, sans-serif; background: #0a0a0a; color: #fff; }
+    header { text-align: center; padding: 40px 20px 30px; background: linear-gradient(180deg, #111 0%, #0a0a0a 100%); }
+    h1 { font-size: 1.4rem; color: #d4af37; margin-bottom: 10px; }
+    nav { display: flex; justify-content: center; gap: 20px; padding: 15px; background: #111; flex-wrap: wrap; }
+    nav a { color: #d4af37; text-decoration: none; }
+    section { padding: 40px 20px; max-width: 800px; margin: 0 auto; }
+    .btn { display: inline-block; background: #d4af37; color: #000; padding: 12px 24px; margin: 10px; text-decoration: none; border-radius: 4px; font-weight: bold; }
+    footer { text-align: center; padding: 30px; color: #666; }
   </style>
 </head>
 <body>
-  <h1>GC Records</h1>
-  <h2>Navidad en América</h2>
-  <p>Sitio en construcción. El website completo se está cargando.</p>
-  <p><a href="https://open.spotify.com/artist/0iE6R7cA8cQb0m0m0m0m0m" target="_blank">Spotify</a></p>
-  <p>Email: sat0817@hotmail.com</p>
+  <header>
+    <h1>Guillermo Cardenas</h1>
+    <p>GC Records</p>
+    <p>Navidad en América</p>
+  </header>
+  <nav>
+    <a href="#music">Música</a>
+    <a href="#about">Sobre mí</a>
+    <a href="#contact">Contacto</a>
+  </nav>
+  <section id="music">
+    <h2>Navidad en América</h2>
+    <p>Álbum de Navidad Latino</p>
+    <a class="btn" href="https://open.spotify.com/search/Navidad%20en%20Am%C3%A9rica%20Guillermo%20Cardenas" target="_blank">Escuchar en Spotify</a>
+    <a class="btn" href="https://music.apple.com/search?term=Navidad%20en%20Am%C3%A9rica%20Guillermo%20Cardenas" target="_blank">Apple Music</a>
+  </section>
+  <section id="about">
+    <h2>Sobre GC Records</h2>
+    <p>Música latina navideña creada por Guillermo Cardenas.</p>
+  </section>
+  <section id="contact">
+    <h2>Contacto</h2>
+    <p>Email: <a href="mailto:sat0817@hotmail.com" style="color:#d4af37;">sat0817@hotmail.com</a></p>
+  </section>
+  <footer>
+    <p>© 2026 GC Records. All rights reserved.</p>
+  </footer>
 </body>
 </html>
