@@ -6,45 +6,68 @@
   <title>Guillermo Cardenas - GC Records</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0a0a; color: #ffffff; line-height: 1.6; }
-    header { text-align: center; padding: 100px 20px 70px; background: linear-gradient(180deg, #111111 0%, #0a0a0a 100%); }
-    h1 { font-size: 3rem; color: #d4af37; margin-bottom: 16px; font-weight: 700; letter-spacing: 1px; }
-    header p { font-size: 1.4rem; color: #cccccc; margin: 10px 0; }
-    nav { display: flex; justify-content: center; gap: 45px; padding: 26px; background: #111111; flex-wrap: wrap; border-bottom: 1px solid #222; }
-    nav a { color: #d4af37; text-decoration: none; font-weight: 500; font-size: 1.2rem; }
-    nav a:hover { text-decoration: underline; }
-    section { padding: 100px 20px; max-width: 920px; margin: 0 auto; }
-    h2 { font-size: 2.2rem; color: #d4af37; margin-bottom: 24px; }
-    section p { margin-bottom: 28px; color: #dddddd; font-size: 1.15rem; }
-    .btn { display: inline-block; background: #d4af37; color: #000000; padding: 18px 36px; margin: 16px 10px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 1.1rem; }
-    .btn:hover { background: #e6c35c; }
-    footer { text-align: center; padding: 70px 20px; color: #666666; border-top: 1px solid #222; }
+    body { font-family: system-ui, -apple-system, sans-serif; background: #0a0a0a; color: #fff; }
+    header { text-align: center; padding: 40px 20px 30px; background: linear-gradient(180deg, #111 0%, #0a0a0a 100%); }
+    .logo { width: 160px; height: 160px; border-radius: 50%; margin-bottom: 20px; object-fit: cover; object-position: center; }
+    h1 { font-size: 1.2rem; letter-spacing: 1px; color: #fff; font-weight: 500; margin-bottom: 10px; }
+    .lang-toggle { margin-top: 15px; }
+    .lang-toggle button { background: transparent; border: 2px solid #d4af37; color: #d4af37; padding: 6px 16px; margin: 0 5px; cursor: pointer; border-radius: 4px; }
+    .lang-toggle button.active { background: #d4af37; color: #000; }
+    nav { display: flex; justify-content: center; gap: 20px; padding: 15px; border-bottom: 1px solid #333; background: #0a0a0a; flex-wrap: wrap; }
+    nav a { color: #d4af37; text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; }
+    nav a:hover { color: #fff; }
+    .hero { text-align: center; padding: 40px 20px; }
+    .hero h2 { font-size: 2.2rem; margin-bottom: 20px; color: #d4af37; }
+    .hero img { max-width: 400px; width: 100%; border-radius: 12px; margin-bottom: 20px; }
+    .hero p { color: #ccc; max-width: 600px; margin: 0 auto; }
+    section { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+    h2 { color: #d4af37; font-size: 1.5rem; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 10px; }
+    .card { background: #1a1a1a; border-radius: 12px; padding: 25px; margin-top: 20px; }
+    .tracklist { list-style: none; }
+    .tracklist li { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #333; }
+    .tracklist .num { color: #d4af37; font-weight: bold; margin-right: 15px; }
+    .tracklist a { color: #d4af37; text-decoration: none; font-size: 0.9rem; }
+    .memory { text-align: center; }
+    .memory img { width: 130px; height: 130px; border-radius: 50%; border: 3px solid #d4af37; object-fit: cover; margin-bottom: 15px; }
+    .contacts { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
+    .contact-card { background: #1a1a1a; border-radius: 12px; padding: 20px; }
+    .contact-card h4 { color: #d4af37; margin-bottom: 5px; }
+    .contact-card .role { font-size: 0.8rem; color: #888; margin-bottom: 10px; }
+    footer { text-align: center; padding: 40px 20px; color: #666; font-size: 0.9rem; }
+    .es { display: none; }
+    body.es .en { display: none; }
+    body.es .es { display: inline; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Guillermo Cardenas</h1>
-    <p>GC Records</p>
-    <p>Navidad en América</p>
-  </header>
-  <nav>
-    <a href="#music">Música</a>
-    <a href="#about">Sobre mí</a>
-    <a href="#contact">Contacto</a>
-  </nav>
-  <section id="music">
-    <h2>Navidad en América</h2>
-    <p>Álbum de Navidad Latino</p>
-    <a class="btn" href="https://open.spotify.com/search/Navidad%20en%20Am%C3%A9rica%20Guillermo%20Cardenas" target="_blank">Escuchar en Spotify</a>
-    <a class="btn" href="https://music.apple.com/search?term=Navidad%20en%20Am%C3%A9rica%20Guillermo%20Cardenas" target="_blank">Apple Music</a>
-  </section>
-  <section id="about">
-    <h2>Sobre GC Records</h2>
-    <p>Música latina navideña creada por Guillermo Cardenas.</p>
+    <img class="logo" src="data:image/jpeg;base64,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" alt="Ali Cáceres Arata">
+      <div style="color:#d4af37; margin-bottom:5px;"><span class="en">In Memory Of</span><span class="es">En Memoria De</span></div>
+      <h3 style="color:#d4af37; margin-bottom:15px;">Ali Cáceres Arata</h3>
+      <p style="color:#ccc;"><span class="en">Songwriter, Producer & Founder of APDAYC from Perú. This project is dedicated in memory of Ali Cáceres Arata. His spirit and music continue to inspire us.</span><span class="es">Compositor, Productor y Fundador de APDAYC de Perú. Este proyecto está dedicado en memoria de Ali Cáceres Arata. Su espíritu y música continúan inspirándonos.</span></p>
+    </div>
   </section>
   <section id="contact">
-    <h2>Contacto</h2>
-    <p>Email: <a href="mailto:sat0817@hotmail.com" style="color:#d4af37;">sat0817@hotmail.com</a></p>
+    <h2><span class="en">Contact</span><span class="es">Contacto</span></h2>
+    <p style="margin-bottom:15px;"><span class="en">General inquiries:</span><span class="es">Consultas generales:</span> <a href="mailto:mrg.viral@gmail.com" style="color:#d4af37;">mrg.viral@gmail.com</a></p>
+    <div class="contacts">
+      <div class="contact-card">
+        <h4>Crissy Mercado</h4>
+        <div class="role"><span class="en">PUBLIC RELATIONS – USA</span><span class="es">RELACIONES PÚBLICAS – USA</span></div>
+        <p><span class="en">US media, radio & industry relations</span><span class="es">Medios, radio y relaciones de la industria en USA</span></p>
+      </div>
+      <div class="contact-card">
+        <h4>Carlos Sosa</h4>
+        <div class="role"><span class="en">PUBLIC RELATIONS – LATIN AMERICA</span><span class="es">RELACIONES PÚBLICAS – LATINOAMÉRICA</span></div>
+        <p><span class="en">Latin America media & regional promotion</span><span class="es">Medios de Latinoamérica y promoción regional</span></p>
+      </div>
+      <div class="contact-card">
+        <h4>Stephany Alvarado</h4>
+        <div class="role"><span class="en">MEDIA</span><span class="es">MEDIOS</span></div>
+        <p><span class="en">Media inquiries & coordination</span><span class="es">Consultas de medios y coordinación</span></p>
+        <p style="margin-top:5px;"><a href="mailto:sat0817@hotmail.com" style="color:#d4af37;">sat0817@hotmail.com</a></p>
+      </div>
+    </div>
   </section>
   <footer>
     <p>© 2026 GC Records. All rights reserved.</p>
